@@ -15,15 +15,8 @@ app.use(
         credentials:true
     })
 )
-
-app.listen(4000,async()=>{
-    try {
-        await connectDb();
-        msg="connected"
-        console.log("Connected to MongoDB");
-    } catch (err) {
-        console.log('Error connecting to database:');
-    }
+connectDb();
+app.listen(4000,()=>{
     console.log("listening on port 4000")
 })
 
