@@ -20,7 +20,7 @@ export default function Cart() {
         const fetchData = async () => {
             if (token) {
                 try {
-                    const response = await fetch(`https://ecommerce-website-next-js-theta.vercel.app//api/cart`, {
+                    const response = await fetch(`https://ecommerce-website-next-js-theta.vercel.app/api/cart`, {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ export default function Cart() {
     const handleClick = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`https://ecommerce-website-next-js-theta.vercel.app//api/orders/add`, {
+            const response = await fetch(`https://ecommerce-website-next-js-theta.vercel.app/api/orders/add`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

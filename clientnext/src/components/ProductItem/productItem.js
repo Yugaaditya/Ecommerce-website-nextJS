@@ -14,7 +14,7 @@ const ProductItem = ({post}) => {
     const token = localStorage.getItem('token');
     if (token) {
       try {
-        const response = await fetch(`https://ecommerce-website-next-js-theta.vercel.app//api/cart/add`, {
+        const response = await fetch(`https://ecommerce-website-next-js-theta.vercel.app/api/cart/add`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

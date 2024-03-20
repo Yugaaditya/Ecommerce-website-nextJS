@@ -19,7 +19,7 @@ const ProductsPage = ({ sortType, rating, category, search }) => {
         token = localStorage.getItem('token');
         const fetchData = async () => {
             try {
-                const response = await fetch('https://ecommerce-website-next-js-theta.vercel.app//api/product', {
+                const response = await fetch('https://ecommerce-website-next-js-theta.vercel.app/api/product', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const ProductsPage = ({ sortType, rating, category, search }) => {
         const fetchCartData = async () => {
             if (token) {
                 try {
-                    const response = await fetch(`https://ecommerce-website-next-js-theta.vercel.app//api/cart`, {
+                    const response = await fetch(`https://ecommerce-website-next-js-theta.vercel.app/api/cart`, {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',
