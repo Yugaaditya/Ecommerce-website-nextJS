@@ -3,7 +3,6 @@ import styles from './productCard.module.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import { DarkModeContext } from '../../context/DarkModeContext';
-import Image from 'next/image';
 
 const ProductCard = ({ onClick, item, cartData }) => {
   const theme = useContext(DarkModeContext);
@@ -105,7 +104,7 @@ const ProductCard = ({ onClick, item, cartData }) => {
   return (
     <div onClick={onClick} className={styles["product-card"]} style={cardColour}>
       <div className={styles["product-image-container"]}>
-        <Image src={item.image} alt="Product" className={styles["product-image"]} />
+        <img src={item.image} alt="Product" className={styles["product-image"]} />
         <div className={styles["product-rating"]} style={ratingColour}>{item.rating} <span role="img" aria-label="star">⭐</span></div>
       </div>
       <div className={styles["product-details"]}>

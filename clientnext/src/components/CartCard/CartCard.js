@@ -3,7 +3,6 @@ import { FaTrash } from 'react-icons/fa';
 import styles from './cartCard.module.css'; 
 import { useRouter } from 'next/router';
 import { DarkModeContext } from "../../context/DarkModeContext";
-import Image from "next/image";
 
 export default function CartCard({ props, productItems, setProductItems }) {
   const theme = useContext(DarkModeContext);
@@ -50,7 +49,7 @@ export default function CartCard({ props, productItems, setProductItems }) {
 
   return (
     <div className={styles["cart-container"]}> {/* Use CSS module class */}
-      <Image className={styles["cart-product-image"]} src={props.image} alt={`${props.name} image`} />
+      <img className={styles["cart-product-image"]} src={props.image} alt={`${props.name} image`} />
       <div className={styles["cart-item-details"]}>
         <h2>{props.name}</h2>
         <p>Category: <i>{props.category}</i></p>

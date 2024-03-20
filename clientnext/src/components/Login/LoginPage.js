@@ -54,7 +54,7 @@ export default function LoginPage({ setLoginStatus }) {
     return (
         <div className={styles["login-container"]} style={mainColour}>
             <div className={styles["login-form"]} style={cardColour}>
-                <Image className={styles["login-form-image"]} src="/Logo.png" />
+                <img className={styles["login-form-image"]} src="/Logo.png" />
                 <div className={styles["login-text"]}>
                     <h3>Enter your login details</h3>
                 </div>

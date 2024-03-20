@@ -2,7 +2,6 @@ import React, { useState, useReducer, useContext, useEffect } from "react"
 import styles from "./navbar.module.css"
 import { useRouter } from 'next/router';
 import { DarkModeContext } from "../../context/DarkModeContext";
-import Link from "next/link";
 
 export default function Navbar({ LoginStatus, setLoginStatus, setSorting, setRating, setCategory, search, setSearch, dispatch }) {
     const router = useRouter();
@@ -86,43 +85,43 @@ export default function Navbar({ LoginStatus, setLoginStatus, setSorting, setRat
                             <p className={styles["home-icon"]} onClick={handleHome} >Home</p>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Rating
-                            </Link >
+                            </a>
                             <ul className="dropdown-menu">
-                                <li><Link className="dropdown-item" onClick={() => handleRating(4)}>Rating: <b>4⭐- 5⭐</b></Link ></li>
-                                <li><Link className="dropdown-item" onClick={() => handleRating(3)}>Rating: <b>3⭐- 4⭐</b></Link ></li>
-                                <li><Link className="dropdown-item" onClick={() => handleRating(2)}>Rating: <b>2⭐- 3⭐</b></Link ></li>
-                                <li><Link className="dropdown-item" onClick={() => handleRating(1)}>Rating: <b>1⭐- 2⭐</b></Link ></li>
+                                <li><a className="dropdown-item" onClick={() => handleRating(4)}>Rating: <b>4⭐- 5⭐</b></a></li>
+                                <li><a className="dropdown-item" onClick={() => handleRating(3)}>Rating: <b>3⭐- 4⭐</b></a></li>
+                                <li><a className="dropdown-item" onClick={() => handleRating(2)}>Rating: <b>2⭐- 3⭐</b></a></li>
+                                <li><a className="dropdown-item" onClick={() => handleRating(1)}>Rating: <b>1⭐- 2⭐</b></a></li>
                                 {/* <li><hr className="dropdown-divider" /></li>
-                                <li><Link className="dropdown-item" href="#">Something else here</Link ></li> */}
+                                <li><a className="dropdown-item" href="#">Something else here</a></li> */}
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Sort By
-                            </Link >
+                            </a>
                             <ul className="dropdown-menu">
-                                <li><Link className="dropdown-item" onClick={() => handleSort('priceLowToHigh')}>Price: low to high</Link ></li>
-                                <li><Link className="dropdown-item" onClick={() => handleSort('priceHighToLow')}>Price: high to low</Link ></li>
-                                <li><Link className="dropdown-item" onClick={() => handleSort('ratingHighToLow')}>Rating: high to low</Link ></li>
+                                <li><a className="dropdown-item" onClick={() => handleSort('priceLowToHigh')}>Price: low to high</a></li>
+                                <li><a className="dropdown-item" onClick={() => handleSort('priceHighToLow')}>Price: high to low</a></li>
+                                <li><a className="dropdown-item" onClick={() => handleSort('ratingHighToLow')}>Rating: high to low</a></li>
                                 {/* <li><hr className="dropdown-divider" /></li>
-                                <li><Link className="dropdown-item" href="#">Something else here</Link ></li> */}
+                                <li><a className="dropdown-item" href="#">Something else here</a></li> */}
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Category
-                            </Link >
+                            </a>
                             <ul className="dropdown-menu">
-                                <li><Link className="dropdown-item" onClick={() => { handleCategory("fragrances") }}>fragrances</Link ></li>
-                                <li><Link className="dropdown-item" onClick={() => { handleCategory("groceries") }}>groceries</Link ></li>
-                                <li><Link className="dropdown-item" onClick={() => { handleCategory("home-decoration") }}>home-decoration</Link ></li>
-                                <li><Link className="dropdown-item" onClick={() => { handleCategory("laptops") }}>laptops</Link ></li>
-                                <li><Link className="dropdown-item" onClick={() => { handleCategory("skincare") }}>skincare</Link ></li>
-                                <li><Link className="dropdown-item" onClick={() => { handleCategory("smartphones") }}>smartphones</Link ></li>
+                                <li><a className="dropdown-item" onClick={() => { handleCategory("fragrances") }}>fragrances</a></li>
+                                <li><a className="dropdown-item" onClick={() => { handleCategory("groceries") }}>groceries</a></li>
+                                <li><a className="dropdown-item" onClick={() => { handleCategory("home-decoration") }}>home-decoration</a></li>
+                                <li><a className="dropdown-item" onClick={() => { handleCategory("laptops") }}>laptops</a></li>
+                                <li><a className="dropdown-item" onClick={() => { handleCategory("skincare") }}>skincare</a></li>
+                                <li><a className="dropdown-item" onClick={() => { handleCategory("smartphones") }}>smartphones</a></li>
                                 {/* <li><hr className="dropdown-divider" /></li>
-                                <li><Link className="dropdown-item" href="#">Something else here</Link ></li> */}
+                                <li><a className="dropdown-item" href="#">Something else here</a></li> */}
                             </ul>
                         </li>
                         <li className="nav-item">

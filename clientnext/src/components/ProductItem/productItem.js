@@ -3,7 +3,6 @@ import styles from './productItem.module.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import { DarkModeContext } from '../../context/DarkModeContext';
-import Image from 'next/image';
 
 const ProductItem = ({post}) => {
   const router = useRouter();
@@ -59,7 +58,7 @@ const ProductItem = ({post}) => {
       <div className={styles["product-item"]} style={mainColour}>
         <div className={styles["product-item-box"]} style={cardColour}>
           <div className={styles["product-item-left"]}>
-            <Image src={image} alt={name} className={styles["product-item-image"]} />
+            <img src={image} alt={name} className={styles["product-item-image"]} />
             <button className={styles["add-to-cart-button"]} onClick={handleAddToCart}>Add to Cart <FaShoppingCart /></button>
           </div>
           <div className={styles["product-item-right"]}>
