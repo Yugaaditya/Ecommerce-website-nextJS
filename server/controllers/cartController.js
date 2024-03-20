@@ -30,6 +30,7 @@ const getCart = async (req, res) => {
 
 const addItemToCart = async (req, res) => {
     try {
+        console.log(3);
         const userId = req.userId;
         const { productId } = req.body;
 

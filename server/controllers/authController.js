@@ -8,7 +8,7 @@ const login = async (req, res) => {
         const { email, password } = req.body;
 
         const user = await User.findOne({ email });
-
+        
         if (!user) {
             const hashedPassword = await bcrypt.hash(password,8);
             const newUser = new User({ email, password:hashedPassword });

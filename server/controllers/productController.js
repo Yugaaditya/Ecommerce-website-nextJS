@@ -56,7 +56,24 @@ const getProductById = async (req, res) => {
     }
 };
 
+
+const getAllProductsIds = async (req, res) => {
+    try {
+        // Fetch all products from the database
+        const products = await Product.find();
+
+        // Extract only the product IDs from the fetched products
+        const productIds = products.map(product => product._id);
+
+        res.json(productIds);
+    } catch (error) {
+        console.error('Error fetching product IDs:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
 module.exports = {
     getAllProducts,
-    getProductById
+    getProductById,
+    getAllProductsIds
 };
