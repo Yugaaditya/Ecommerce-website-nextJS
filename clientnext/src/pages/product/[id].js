@@ -6,7 +6,7 @@ export default function Item(props){
 }
 
 export async function getStaticPaths() {
-    const res = await fetch('http://localhost:4000/api/product/ids')
+    const res = await fetch('https://ecommerce-website-next-js-theta.vercel.app//api/product/ids')
     const posts = await res.json()
     const paths = posts.map((id) => ({
       params: { id },
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
   export async function getStaticProps({ params }) {
     let post="";
     try{
-    const res = await fetch(`http://localhost:4000/api/product/${params.id}`)
+    const res = await fetch(`https://ecommerce-website-next-js-theta.vercel.app//api/product/${params.id}`)
     if (res.ok) {
         post = await res.json()
       } else if (response.status === 404) {

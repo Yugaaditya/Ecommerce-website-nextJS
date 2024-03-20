@@ -17,7 +17,7 @@ export default function CartCard({ props, productItems, setProductItems }) {
   },[])
   async function removeFromCart() {
     try {
-      const response = await fetch(`http://localhost:4000/api/cart/remove`, {
+      const response = await fetch(`https://ecommerce-website-next-js-theta.vercel.app//api/cart/remove`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

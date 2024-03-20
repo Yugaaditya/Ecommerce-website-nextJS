@@ -33,7 +33,7 @@ const ProductCard = ({ onClick, item, cartData }) => {
       setNewColour(colour === iconColour ? "red" : iconColour);
       if (colour === iconColour) {
         try {
-          const response = await fetch(`http://localhost:4000/api/cart/add`, {
+          const response = await fetch(`https://ecommerce-website-next-js-theta.vercel.app//api/cart/add`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const ProductCard = ({ onClick, item, cartData }) => {
       }
       else {
         try {
-          const response = await fetch(`http://localhost:4000/api/cart/remove`, {
+          const response = await fetch(`https://ecommerce-website-next-js-theta.vercel.app//api/cart/remove`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
